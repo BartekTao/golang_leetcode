@@ -84,3 +84,9 @@ test key is present in map
 if "key" is in dic, elem will set to the value, and ok = true
 if "key" isn't in dic, elem is the zero value for the map's element type, and ok = false
 
+## go
+
+## sync.Mutex
+Lock
+Unlock
+配合 `defer mux.Unlock()` 可確保解鎖
