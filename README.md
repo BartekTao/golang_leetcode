@@ -51,3 +51,36 @@ e = &MyError{
 	"it didn't work",
 }
 ```
+## make 使用方法
+建立 int array 且長度為 5 的切片
+`array := make([]int, 5)`
+
+建立 int array，長度為 0 ,容量為 5
+`array := make([]int, 0, 5) // len(array) = 0, cpa(array) = 5`
+
+初始化 map 使用(方法之一)
+```
+var dic map[string]int
+dic := make(map[string]int) // 此時 m 為空的map，隨後才能 insert value
+dic["a"] = 1
+```
+
+## map 使用方法
+直接初始化 map 並設值的方式
+`dic := map[string]int{"a":1, "b",2}`
+`v := map`
+
+insert
+`dic["key"]=123`
+
+get
+`var num int = dic["key"]`
+
+delete
+`delete(dic, "key")`
+
+test key is present in map
+`elem, ok = dic["key"]`
+if "key" is in dic, elem will set to the value, and ok = true
+if "key" isn't in dic, elem is the zero value for the map's element type, and ok = false
+
