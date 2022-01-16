@@ -25,3 +25,29 @@ mod = bartektao.com
 若為指標擴充(method)，則操作的如下
 `func (m *Model) Scale(f float64) { }` => 剛方法內容若改動到 Model，則會變動 Model 本身
 
+## 常見介面使用
+```
+type error interface{
+    Error() string
+}
+```
+可自定義 error 輸出內容，如下
+```
+type MyError struct {
+	When time.Time
+	What string
+}
+
+func (e *MyError) Error() string {
+	return fmt.Sprintf("at %v, %s",
+		e.When, e.What)
+}
+```
+MyError 等同於 error type，如下
+```
+var e error
+e = &MyError{
+	time.Now(),
+	"it didn't work",
+}
+```
