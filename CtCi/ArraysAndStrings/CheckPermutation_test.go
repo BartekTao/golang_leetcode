@@ -30,6 +30,11 @@ func TestCheckPermutation_byte(t *testing.T) {
 			args: args{"asggggfgfdf", "ggfgeef"},
 			want: false,
 		},
+		{
+			name: "difference len",
+			args: args{"singletons", "concluding"},
+			want: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
