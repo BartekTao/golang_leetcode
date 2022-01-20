@@ -60,8 +60,8 @@ e = &MyError{
 
 初始化 map 使用(方法之一)
 ```
-var dic map[string]int
-dic := make(map[string]int) // 此時 m 為空的map，隨後才能 insert value
+var dic map[string]int // 此時 m 為空的map，make 後才能 insert value
+dic := make(map[string]int) 
 dic["a"] = 1
 ```
 
