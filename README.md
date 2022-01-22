@@ -90,3 +90,12 @@ if "key" isn't in dic, elem is the zero value for the map's element type, and ok
 Lock
 Unlock
 配合 `defer mux.Unlock()` 可確保解鎖
+
+## []rune vs []byte
+`type rune = int32 // 4個byte`
+`type byte = uint8 // 1個byte`
+string 轉為 rune or byte 時，會轉為 unicode
+
+英文字: 1個byte
+中文字: 3個byte
+在顯示中文時，slice 的長度要正確才能顯示
