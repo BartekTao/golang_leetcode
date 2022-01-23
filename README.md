@@ -99,3 +99,7 @@ string 轉為 rune or byte 時，會轉為 unicode
 英文字: 1個byte
 中文字: 3個byte
 在顯示中文時，slice 的長度要正確才能顯示
+
+## ...的用法
+...為 golang的語法糖，放於 array 後面，代表將該 array slice 後進行操作
+ex. `func append(slice []Type, elems ...Type) []Type` => 以string為例，可傳入 `append([]string, string)` or `append([]string, string, string)` or `append([]string, []string{"1", "2", "3"}...)`
