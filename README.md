@@ -103,3 +103,20 @@ string 轉為 rune or byte 時，會轉為 unicode
 ## ...的用法
 ...為 golang的語法糖，放於 array 後面，代表將該 array slice 後進行操作
 ex. `func append(slice []Type, elems ...Type) []Type` => 以string為例，可傳入 `append([]string, string)` or `append([]string, string, string)` or `append([]string, []string{"1", "2", "3"}...)`
+
+## go get vs git clone
+* go get  
+該命令可以理解為兩個操作 git clone + go install , 執行會將遠端程式碼及其依賴項 clone 到【$GOPATH/src】 目錄中  
+```
+-d 只下載不安裝
+-f 只有在你包含了-u引數的時候才有效，
+   不讓-u去驗證import中的每一個都已經獲取了，
+   這對於本地fork的包特別有用
+-fix 在獲取原始碼之後先執行fix，然後再去做其他的事情
+-t 同時也下載需要為執行測試所需要的包
+-u 強制使用網路去更新包和它的依賴包
+-v 顯示執行的命令
+```  
+
+* git clone  
+該命令可以理解為將程式碼克隆到目錄中, 執行會將遠端程式碼 clone 到當前目錄中

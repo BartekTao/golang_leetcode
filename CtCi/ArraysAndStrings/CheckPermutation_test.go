@@ -17,7 +17,7 @@ func TestCheckPermutation_byte(t *testing.T) {
 		// TODO: Add test cases.
 		{
 			name: "true case",
-			args: args{"asdf", "dfsa"},
+			args: args{"as北df&39\u0081", "dfsa北&39\u0081"},
 			want: true,
 		},
 		{
