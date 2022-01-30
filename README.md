@@ -5,7 +5,7 @@ go 文件 : https://tour.go-zh.org/list
 
 ## 常用go 指令
 初始化mod檔  
-`go init mod xxxx.com/projectName`  
+`go mod init xxxx.com/projectName`  
 查看go環境變數  
 `go env`  
 
