@@ -5,7 +5,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	cur := ans
 	// 進位值
 	c := 0
-	for l1 != nil || l2 != nil {
+	for l1 != nil || l2 != nil || c != 0 {
 		sum := 0
 		if l1 != nil {
 			sum += l1.Val
@@ -19,9 +19,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		cur.Next = &ListNode{Val: sum % 10}
 		cur = cur.Next
 		c = sum / 10
-	}
-	if c != 0 {
-		cur.Next = &ListNode{Val: c}
 	}
 	return ans.Next
 }
