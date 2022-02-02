@@ -1,12 +1,6 @@
 package ctci
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
-	if headA == headB {
-		return headA
-	}
-	if headA == nil || headB == nil {
-		return &ListNode{}
-	}
 	curA, curB := headA, headB
 
 	for curA != curB {
