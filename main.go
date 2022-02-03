@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	cict "bartektao.com/golang_leetcode/CtCi/ArraysAndStrings"
+	cict "bartektao.com/golang_leetcode/ctci/arrays_and_strings"
 )
 
 func main() {
