@@ -1,4 +1,4 @@
-package ctci
+package triplestack
 
 type TripleInOne struct {
 	stack      []int
