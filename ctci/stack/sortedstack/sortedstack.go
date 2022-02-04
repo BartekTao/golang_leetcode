@@ -1,5 +1,6 @@
 package sortedstack
 
+// TODO 使用 min heap 實作
 type SortedStack struct {
 	sortedData []int
 }
