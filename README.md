@@ -120,3 +120,5 @@ ex. `func append(slice []Type, elems ...Type) []Type` => 以string為例，可�
 
 * git clone  
 該命令可以理解為將程式碼克隆到目錄中, 執行會將遠端程式碼 clone 到當前目錄中
+
+## 全域變數 !?!?
