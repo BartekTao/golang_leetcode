@@ -16,7 +16,7 @@ func isValid(s string) bool {
 			if len(stack) == 0 || pairs[stack[len(stack)-1]] != v {
 				return false
 			} else {
-				stack = stack[:len(s)-1]
+				stack = stack[:len(stack)-1]
 			}
 		}
 	}
